@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t lloydmatereke/nodeapp_test:latest.'
+        sh 'docker build -t pipelinejenkins/cicd-jenkins:latest .'
       }
     }
     stage('Login') {
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push lloydmatereke/nodeapp_test:latest'
+        sh 'docker push  pipelinejenkins/cicd-jenkins:latest'
       }
     }
   }
